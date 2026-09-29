@@ -192,10 +192,14 @@ export default function Home() {
 
       <section className="experience-banner" aria-label="Chamada para aula experimental">
         <div className="experience-track" aria-hidden="true">
-          <span>AULA EXPERIMENTAL GRÁTIS</span><Star fill="currentColor" />
-          <span>SEM PRESSÃO</span><Star fill="currentColor" />
-          <span>NO SEU RITMO</span><Star fill="currentColor" />
-          <span>COMECE AGORA</span><Star fill="currentColor" />
+          {[0, 1].map((copy) => (
+            <div className="experience-group" key={copy}>
+              <span>AULA EXPERIMENTAL GRÁTIS</span><Star fill="currentColor" />
+              <span>SEM PRESSÃO</span><Star fill="currentColor" />
+              <span>NO SEU RITMO</span><Star fill="currentColor" />
+              <span>COMECE AGORA</span><Star fill="currentColor" />
+            </div>
+          ))}
         </div>
       </section>
 

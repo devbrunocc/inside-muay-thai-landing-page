@@ -192,9 +192,10 @@ h1,h2,h3 { font-family:"Arial Black", "Arial Narrow", Arial, sans-serif; text-tr
 .service-card a { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:auto; padding-top:23px; border-top:1px solid currentColor; font-size:.75rem; font-weight:900; text-transform:uppercase; }
 
 .experience-banner { overflow:hidden; background:var(--yellow); color:var(--ink); transform:rotate(-1.2deg) scale(1.02); transform-origin:center; }
-.experience-track { min-width:max-content; display:flex; align-items:center; gap:27px; padding:20px 0; animation:marquee 28s linear infinite; font-family:"Arial Black",Arial,sans-serif; font-size:1.08rem; letter-spacing:.02em; }
-.experience-track svg { width:19px; height:19px; }
-@keyframes marquee { to { transform:translateX(-25%); } }
+.experience-track { width:max-content; display:flex; padding:20px 0; animation:marquee 28s linear infinite; font-family:"Arial Black",Arial,sans-serif; font-size:1.08rem; letter-spacing:.02em; }
+.experience-group { width:max-content; min-width:100vw; display:flex; flex:none; align-items:center; justify-content:space-around; gap:27px; padding:0 27px; white-space:nowrap; line-height:1; }
+.experience-track svg { width:19px; height:19px; flex:none; }
+@keyframes marquee { to { transform:translateX(-50%); } }
 
 .space-section { padding:135px 0 120px; background:var(--ink); color:white; }
 .light-heading > p { color:#a7a7ad; }
