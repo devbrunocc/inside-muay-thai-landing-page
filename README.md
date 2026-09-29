@@ -63,7 +63,7 @@ Inicie o ambiente de desenvolvimento:
 npm run dev
 ```
 
-Abra [http://localhost:5173](http://localhost:5173) no navegador.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
 > No PowerShell com execução de scripts bloqueada, use `npm.cmd` no lugar de `npm`, por exemplo: `npm.cmd run dev`.
 
@@ -75,6 +75,7 @@ Abra [http://localhost:5173](http://localhost:5173) no navegador.
 | `npm run build` | Gera a versão de produção |
 | `npm start` | Executa localmente a versão já compilada |
 | `npm run lint` | Analisa a qualidade do código |
+| `npm run build:cloudflare` | Gera o artefato alternativo para Cloudflare Workers |
 
 ## Personalização
 
@@ -106,7 +107,7 @@ O build atual foi validado com sucesso. O lint não apresenta erros; permanecem 
 
 ## Publicação
 
-O projeto gera uma aplicação compatível com Cloudflare Workers por meio do Vinext. Antes da publicação, revise os dados em `lib/site-config.ts` e confirme se os links de contato estão atualizados.
+O comando padrão `npm run build` gera a aplicação Next.js esperada pela Vercel. Para uma publicação alternativa no Cloudflare Workers, use o comando `npm run build:cloudflare`, que gera o artefato com Vinext. Antes de publicar, revise os dados em `lib/site-config.ts` e confirme se os links de contato estão atualizados.
 
 ## Contato da academia
 
